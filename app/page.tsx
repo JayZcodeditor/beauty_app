@@ -1,165 +1,188 @@
-"use client";
+'use client'; // ต้องมีบรรทัดนี้ด้านบนสุด
 
-import { useState } from "react";
-import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+
+import Navbar from './components/navbar';
+import Footer from './components/footer';
+import CategoryHeader from './components/categoryheader';
+import Image from 'next/image';
+import IconBanner from './assets/icons/banner/webp_Strip-1200x150-Head-232167-0.webp';
+import IconBanner1 from './assets/icons/banner/webp_Strip-1200x150-555-1-232184-0.webp';
+
+import IconBanner1_1 from './assets/icons/banner/1.webp';
+import IconBanner1_2 from './assets/icons/banner/2.webp';
+import IconBanner1_3 from './assets/icons/banner/3.webp';
+
+import IconPromo1 from './assets/icons/promotion/12-275816-0.webp';
+import IconPromo2 from './assets/icons/promotion/4-275842-0.webp';
+import IconPromo3 from './assets/icons/promotion/80-276230-0.webp';
+
+import { motion } from 'framer-motion';
+import CategoriesGrid from './CategoriesGrid';
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const promos = [IconPromo1, IconPromo2, IconPromo3];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % promos.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="flex min-h-screen flex-col bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex min-h-screen flex-col bg-white font-sans text-zinc-800">
       {/* ✅ Navbar */}
-      <nav className="w-full border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black fixed top-0 left-0 z-50">
-        <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
+      <Navbar />
+
+      {/* ✅ Main Content */}
+      <main className="max-w-6xl mx-auto w-full bg-white">
+        {/* 🟢 ส่วนหัวหมวดหมู่ */}
+        <div className="w-full">
+          <CategoryHeader />
+        </div>
+        {/* 🩷 Banner */}
+        <div className="w-full my-4">
+          <Image
+            src={IconBanner}
+            alt="Beauty Banner"
+            width={1200}
+            height={150}
+            className="w-full rounded-lg object-cover"
+            priority
+          />
+        </div>
+        {/* ❤️ Promo Section */}
+        <div className="relative w-full mb-8 overflow-hidden rounded-xl shadow-lg">
+          <motion.div
+            className="flex transition-transform duration-700 ease-in-out"
+            animate={{ x: `-${index * 100}%` }}
+          >
+            {promos.map((src, i) => (
+              <div key={i} className="flex-shrink-0 w-full">
+                <Image
+                  src={src}
+                  alt={`Beauty Banner ${i + 1}`}
+                  width={1200}
+                  height={150}
+                  className="w-full rounded-lg object-cover"
+                  priority
+                />
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Dots indicator */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+            {promos.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === i ? 'bg-white scale-110' : 'bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* 🧴 หมวดหมู่ */}
+        <CategoriesGrid />
+
+        {/* 🩷 Banner */}
+        <div className="w-full">
+          <Image
+            src={IconBanner1}
+            alt="Beauty Banner"
+            width={1200}
+            height={150}
+            className="w-full rounded-lg object-cover"
+            priority
+          />
+        </div>
+
+        {/* 💄 สินค้าความงาม */}
+        <section className="my-12">
+          <div className="w-full">
             <Image
-              className="dark:invert"
-              src="/next.svg"
-              alt="Next.js logo"
-              width={90}
-              height={20}
+              src={IconBanner1_1}
+              alt="Beauty Banner"
+              width={1200}
+              height={150}
+              className="w-full rounded-lg object-cover"
+              priority
+            />
+            <div className="flex overflow-x-auto space-x-4 py-4 scrollbar-hide">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className="flex-shrink-0 w-48 bg-white rounded-xl shadow hover:shadow-md border border-zinc-100 transition-all duration-200"
+                >
+                  <img
+                    src={`https://source.unsplash.com/300x400/?cosmetic,${i}`}
+                    alt={`Beauty ${i}`}
+                    className="w-full h-48 object-cover rounded-t-xl"
+                  />
+                  <div className="p-3 text-sm">
+                    <p className="font-medium line-clamp-2">
+                      Srichand แป้งควบคุมความมัน เบลอรูขุมขน
+                    </p>
+                    <p className="text-green-600 font-semibold mt-2">฿189</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="w-full">
+            <Image
+              src={IconBanner1_2}
+              alt="Beauty Banner"
+              width={1200}
+              height={150}
+              className="w-full rounded-lg object-cover"
               priority
             />
           </div>
-
-          {/* Hamburger button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
-          >
-            {isOpen ? (
-              <X className="w-6 h-6 text-zinc-800 dark:text-zinc-100" />
-            ) : (
-              <Menu className="w-6 h-6 text-zinc-800 dark:text-zinc-100" />
-            )}
-          </button>
-
-          {/* Desktop menu */}
-          <div className="hidden md:flex items-center gap-6">
-            <a href="#" className="text-zinc-800 dark:text-zinc-100 hover:underline">
-              หน้าแรก
-            </a>
-            <a href="#" className="text-zinc-800 dark:text-zinc-100 hover:underline">
-              เนื้อหา
-            </a>
-            <a href="#" className="text-zinc-800 dark:text-zinc-100 hover:underline">
-              ติดต่อ
-            </a>
-          </div>
-        </div>
-      </nav>
-
-      {/* ✅ Mobile slide-in menu (from right) */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-zinc-900 shadow-xl transform transition-transform duration-300 ease-in-out z-40 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex justify-between items-center p-4 border-b border-zinc-200 dark:border-zinc-700">
-          <span className="text-lg font-semibold text-zinc-800 dark:text-zinc-100">
-            หน้าแรก
-          </span>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
-          >
-            <X className="w-5 h-5 text-zinc-800 dark:text-zinc-100" />
-          </button>
-        </div>
-
-        <div className="flex flex-col p-4 space-y-4">
-          <a
-            href="#"
-            className="text-zinc-800 dark:text-zinc-100 hover:underline"
-            onClick={() => setIsOpen(false)}
-          >
-            เนื้อหา
-          </a>
-          <a
-            href="#"
-            className="text-zinc-800 dark:text-zinc-100 hover:underline"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className="text-zinc-800 dark:text-zinc-100 hover:underline"
-            onClick={() => setIsOpen(false)}
-          >
-            ติดต่อ
-          </a>
-        </div>
-      </div>
-
-      {/* ✅ Overlay when menu open */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30 transition-opacity duration-300"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-
-      {/* ✅ Main content */}
-      <main className="flex flex-col items-center justify-center min-h-screen w-full max-w-3xl mx-auto py-32 px-6 mt-20 bg-white dark:bg-black sm:items-start">
-        {/* <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className="w-full">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src={IconBanner1_3}
+              alt="Beauty Banner"
+              width={1200}
+              height={150}
+              className="w-full rounded-lg object-cover"
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div> */}
+          </div>
+          {/* <h2 className="text-2xl font-semibold text-zinc-800 mb-4 border-b-4 border-green-400 inline-block pb-1">
+            สินค้าความงาม
+          </h2> */}
+          {/* <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 w-48 bg-white rounded-xl shadow hover:shadow-md border border-zinc-100 transition-all duration-200"
+              >
+                <img
+                  src={`https://source.unsplash.com/300x400/?cosmetic,${i}`}
+                  alt={`Beauty ${i}`}
+                  className="w-full h-48 object-cover rounded-t-xl"
+                />
+                <div className="p-3 text-sm">
+                  <p className="font-medium line-clamp-2">
+                    Srichand แป้งควบคุมความมัน เบลอรูขุมขน
+                  </p>
+                  <p className="text-green-600 font-semibold mt-2">฿189</p>
+                </div>
+              </div>
+            ))}
+          </div> */}
+        </section>
       </main>
+      {/* ✅ Footer */}
+      <Footer />
     </div>
   );
 }
