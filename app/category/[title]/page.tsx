@@ -49,7 +49,7 @@ export default async function CategoryPage({ params }: PageProps) {
   const typeNameMap_1: Record<string, string> = {
     scrub: 'บำรุงผิวหน้า',
     mask: 'มาส์กหน้า',
-    cleanser: 'ทำความสะอาดผิวหน้า',
+    cleansing: 'ทำความสะอาดผิวหน้า',
     sunscreen: 'ป้องกันแสงแดด',
   };
 
