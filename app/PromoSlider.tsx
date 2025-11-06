@@ -1,4 +1,4 @@
-"use client"; // ต้องมีบรรทัดนี้
+"use client";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";

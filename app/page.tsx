@@ -1,7 +1,7 @@
-'use client'; // ต้องมีบรรทัดนี้ด้านบนสุด
+'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 import Navbar from './components/navbar';
 import Footer from './components/footer';
@@ -18,11 +18,16 @@ import IconPromo1 from './assets/icons/promotion/12-275816-0.webp';
 import IconPromo2 from './assets/icons/promotion/4-275842-0.webp';
 import IconPromo3 from './assets/icons/promotion/80-276230-0.webp';
 
+import data1 from '@/public/data/facial_care.json';
+import data2 from '@/public/data/cosmetics.json';
+import data3 from '@/public/data/beauty_accessary.json';
+
 import { motion } from 'framer-motion';
 import CategoriesGrid from './CategoriesGrid';
 
 export default function Home() {
   const promos = [IconPromo1, IconPromo2, IconPromo3];
+  const router = useRouter();
 
   const [index, setIndex] = useState(0);
 
@@ -40,11 +45,12 @@ export default function Home() {
 
       {/* ✅ Main Content */}
       <main className="max-w-6xl mx-auto w-full bg-white">
-        {/* 🟢 ส่วนหัวหมวดหมู่ */}
+        {/* 🟢 ส่วนหัวหมวดหมู่ Breadcumb*/}
         <div className="w-full">
           <CategoryHeader />
         </div>
-        {/* 🩷 Banner */}
+
+        {/* 🩷 Banner Beauty สินค้าความงาม*/}
         <div className="w-full my-4">
           <Image
             src={IconBanner}
@@ -55,7 +61,8 @@ export default function Home() {
             priority
           />
         </div>
-        {/* ❤️ Promo Section */}
+
+        {/* ❤️ Promo slider */}
         <div className="relative w-full mb-8 overflow-hidden rounded-xl shadow-lg">
           <motion.div
             className="flex transition-transform duration-700 ease-in-out"
@@ -89,10 +96,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 🧴 หมวดหมู่ */}
+        {/* 🧴 หมวดหมู่ของผลิตภัฒฑ์ */}
         <CategoriesGrid />
 
-        {/* 🩷 Banner */}
+        {/* 🩷 Banner สินค้าใหม่สวยก่อนใคร */}
         <div className="w-full">
           <Image
             src={IconBanner1}
@@ -104,8 +111,60 @@ export default function Home() {
           />
         </div>
 
-        {/* 💄 สินค้าความงาม */}
+        {/* เนื้อหาตัวอย่างสินค้าแต่ละหมวดหมู่ */}
         <section className="my-12">
+          {/* ดูแลผิวหน้า */}
+          <div className="w-full">
+            <Image
+              src={IconBanner1_2}
+              alt="Beauty Banner"
+              width={1200}
+              height={150}
+              className="w-full rounded-lg object-cover"
+              priority
+            />
+            <div className="flex overflow-x-auto space-x-4 py-4 scrollbar-hide">
+              <div className="flex overflow-x-auto space-x-4 py-4 scrollbar-hide">
+                {data1.Facial_care.map((item: any, index: any) => (
+                  <div
+                    key={index}
+                    onClick={() =>
+                      router.push(`/category/facial_care/${item.id}`)
+                    }
+                    className="flex-shrink-0 w-48 bg-white hover:shadow-md  transition-all duration-200 cursor-pointer"
+                  >
+                    {/* ✅ รูปภาพสินค้า */}
+                    <div className="relative w-full h-48">
+                      <Image
+                        src={
+                          item.url_thumbnail ||
+                          'https://via.placeholder.com/300x400?text=No+Image'
+                        }
+                        alt={item.name}
+                        fill
+                        className="object-cover border border-zinc-100"
+                      />
+                    </div>
+
+                    {/* ✅ ข้อมูลสินค้า */}
+                    <div className="p-3 text-sm">
+                      <p className="font-medium line-clamp-2">{item.name}</p>
+                      <div className="mt-2 text-right">
+                        <p className="text-gray-400 line-through text-xs">
+                          ฿ {(item.price).toFixed(2)}
+
+                        </p>
+                        <p className="text-green-600 font-semibold">
+                          ฿ {(item.price - item.price * 0.23).toFixed(2)}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* เครื่องสำอาง */}
           <div className="w-full">
             <Image
               src={IconBanner1_1}
@@ -116,36 +175,45 @@ export default function Home() {
               priority
             />
             <div className="flex overflow-x-auto space-x-4 py-4 scrollbar-hide">
-              {[1, 2, 3, 4, 5].map((i) => (
+              {data2.Cosmetics.map((item: any, index: any) => (
                 <div
-                  key={i}
-                  className="flex-shrink-0 w-48 bg-white rounded-xl shadow hover:shadow-md border border-zinc-100 transition-all duration-200"
+                  key={index}
+                  onClick={() =>
+                    router.push(`/category/cosmetics/${item.id}`)
+                  }
+                  className="flex-shrink-0 w-48 bg-white hover:shadow-md transition-all duration-200 cursor-pointer"
                 >
-                  <img
-                    src={`https://source.unsplash.com/300x400/?cosmetic,${i}`}
-                    alt={`Beauty ${i}`}
-                    className="w-full h-48 object-cover rounded-t-xl"
-                  />
+                  {/* ✅ รูปภาพสินค้า */}
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={
+                        item.url_thumbnail ||
+                        'https://via.placeholder.com/300x400?text=No+Image'
+                      }
+                      alt={item.name}
+                      fill
+                      className="object-cover border border-zinc-100"
+                    />
+                  </div>
+
+                  {/* ✅ ข้อมูลสินค้า */}
                   <div className="p-3 text-sm">
-                    <p className="font-medium line-clamp-2">
-                      Srichand แป้งควบคุมความมัน เบลอรูขุมขน
-                    </p>
-                    <p className="text-green-600 font-semibold mt-2">฿189</p>
+                    <p className="font-medium line-clamp-2">{item.name}</p>
+                    <div className="mt-2 text-right">
+                      <p className="text-gray-400 line-through text-xs">
+                        ฿ {(item.price).toFixed(2)}
+
+                      </p>
+                      <p className="text-green-600 font-semibold">
+                          ฿ {(item.price - item.price * 0.23).toFixed(2)}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="w-full">
-            <Image
-              src={IconBanner1_2}
-              alt="Beauty Banner"
-              width={1200}
-              height={150}
-              className="w-full rounded-lg object-cover"
-              priority
-            />
-          </div>
+          {/* ของใช้ส่วนตัว */}
           <div className="w-full">
             <Image
               src={IconBanner1_3}
@@ -155,32 +223,48 @@ export default function Home() {
               className="w-full rounded-lg object-cover"
               priority
             />
-          </div>
-          {/* <h2 className="text-2xl font-semibold text-zinc-800 mb-4 border-b-4 border-green-400 inline-block pb-1">
-            สินค้าความงาม
-          </h2> */}
-          {/* <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 w-48 bg-white rounded-xl shadow hover:shadow-md border border-zinc-100 transition-all duration-200"
-              >
-                <img
-                  src={`https://source.unsplash.com/300x400/?cosmetic,${i}`}
-                  alt={`Beauty ${i}`}
-                  className="w-full h-48 object-cover rounded-t-xl"
-                />
-                <div className="p-3 text-sm">
-                  <p className="font-medium line-clamp-2">
-                    Srichand แป้งควบคุมความมัน เบลอรูขุมขน
-                  </p>
-                  <p className="text-green-600 font-semibold mt-2">฿189</p>
+            <div className="flex overflow-x-auto space-x-4 py-4 scrollbar-hide">
+              {data3.Beauty_accessary.map((item: any, index: any) => (
+                <div
+                  key={index}
+                  onClick={() =>
+                    router.push(`/category/beauty_accessary/${item.id}`)
+                  }
+                  className="flex-shrink-0 w-48 bg-white hover:shadow-md transition-all duration-200 cursor-pointer"
+                >
+                  {/* ✅ รูปภาพสินค้า */}
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={
+                        item.url_thumbnail ||
+                        'https://via.placeholder.com/300x400?text=No+Image'
+                      }
+                      alt={item.name}
+                      fill
+                      className="object-cover border border-zinc-100"
+                    />
+                  </div>
+
+                  {/* ✅ ข้อมูลสินค้า */}
+                  <div className="p-3 text-sm">
+                    <p className="font-medium line-clamp-2">{item.name}</p>
+                    <div className="mt-2 text-right">
+                      <p className="text-gray-400 line-through text-xs">
+                        ฿ {(item.price).toFixed(2)}
+
+                      </p>
+                      <p className="text-green-600 font-semibold">
+                          ฿ {(item.price - item.price * 0.23).toFixed(2)}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div> */}
+              ))}
+            </div>
+          </div>
         </section>
       </main>
+
       {/* ✅ Footer */}
       <Footer />
     </div>

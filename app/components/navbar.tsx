@@ -11,13 +11,6 @@ export default function Navbar() {
       {/* ✅ Top Navbar */}
       <nav className="w-full border-b border-zinc-200 bg-white fixed top-0 left-0 z-50 shadow-sm">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <span className="text-lg font-semibold text-green-600">
-              ALL ONLINE
-            </span>
-          </div>
-
           {/* Hamburger (mobile) */}
           <button
             onClick={() => setIsOpen(true)}
@@ -25,6 +18,12 @@ export default function Navbar() {
           >
             <Menu className="w-6 h-6 text-green-700" />
           </button>
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <span className="text-lg font-semibold text-green-600">
+              ALL ONLINE
+            </span>
+          </div>
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center gap-8 text-base font-medium">
@@ -52,10 +51,10 @@ export default function Navbar() {
         onClick={() => setIsOpen(false)}
       />
 
-      {/* ✅ Slide-in Menu (right side) */}
+      {/* ✅ Slide-in Menu (from left side) */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         {/* Header inside drawer */}

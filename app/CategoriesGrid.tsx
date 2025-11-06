@@ -32,7 +32,7 @@ export default function CategoriesGrid() {
         <div
           key={cat.name}
           className="flex flex-col items-center text-center hover:scale-105 transition-transform cursor-pointer"
-          onClick={() => router.push(cat.href)} // <-- แก้ตรงนี้
+          onClick={() => router.push(cat.href)}
         >
           <div className="w-20 h-20 flex items-center justify-center mb-2 overflow-hidden">
             <Image

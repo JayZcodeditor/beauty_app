@@ -1,8 +1,6 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Noto_Sans_Thai } from "next/font/google";
 import "./globals.css";
-// import QueryProvider from "@/provider/QueryProvider";
 
 const notoSans = Noto_Sans_Thai({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -22,10 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSans.className} antialiased`}>
-        {/* <QueryProvider> */}
+      <body className={`${notoSans.className} antialiased`}> 
           {children}
-          {/* </QueryProvider> */}
       </body>
     </html>
   );
