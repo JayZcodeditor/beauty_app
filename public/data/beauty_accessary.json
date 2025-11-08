@@ -2,113 +2,230 @@
     "Beauty_accessary": [
         {
             "id": "b001",
-            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdmain/723291-00-allonline-bt.jpg",
-            "name": "Clear Nose เซรั่มบำรุงผิวหน้า Dark Spot Bright Solution Serum 28 กรัม",
-            "price": 189,
-            "register_number": "11-1-6400003874",
-            "size": "(กxยxส) 7x3x15 ซม.",
-            "weight": "0.07 กก.",
-            "long_detail": "ช่วยลดเลือนรอยดำให้ดูจางลงด้วยสารสกัดจากดอกแซนด์ ลิลลี่ วิตามินซี คอลลาเจน และไฮยาลูรอน 8 โมเลกุล ซึ่งเปรียบเสมือนองครักษ์พิทักษ์ผิว พร้อมทั้งล็อคความชุ่มชื้น ผสานพลังบำรุงผิวโทรมให้กลับมาสดใสด้วย RBA Technology เน้นบำรุงผิวอย่างตรงจุดให้ผิวดูกระจ่างใส เรียบเนียน สม่ำเสมอ Rainbow Algae Technology ช่วยให้ผิวแลดูเรียบเนียน ผิวดูสม่ำเสมอ โกลว กระจ่างใส ผลลัพธ์ที่ได้ขึ้นอยู่กับสภาพผิวของแต่ละบุคคล",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/721255-00-allonline-bt.jpg",
+            "name": "Simplus ไดร์เป่าผม 1250วัตต์ รุ่น CFJH001GY00 - Gray",
+            "price": 349,
+            "register_number": "",
+            "size": "(กxยxส) 7.5x11.5x27 ซม.",
+            "weight": "0.38 กก.",
+            "long_detail": "Simplus ไดร์เป่าผม 1250W พับไม่ได้ มีลมเย็น ดีไซน์ผิวสัมผัสด้าน ป้องกันรอยขีดข่วน สัมผัสละเอียดอ่อน กำลังไฟสูง ลมแรง ผมแห้งเร็วทันใจ มาพร้อมหัวเป่าแบบแบน ช่วยให้เป่าได้เร็วยิ่งขึ้น ปรับอุณหภูมิได้ 3 ระดับ มีลมเย็น มีระบบตัดไฟอัตโนมัติ ป้องกันเมื่อความร้อนสูงเกินไป",
             "url_image": [
-                "https://media.shopat24.com/original/666626-01-allonline-bt-des.jpg",
-                "https://media.shopat24.com/original/666626-02-allonline-bt-des.jpg"
+                "https://media.allonline.7eleven.co.th/original/721255-01-allonline-bt-des.jpg",
+                "https://media.allonline.7eleven.co.th/original/721255-02-allonline-bt-des.jpg",
+                "https://media.allonline.7eleven.co.th/original/721255-03-allonline-bt-des.jpg",
+                "https://media.allonline.7eleven.co.th/original/721255-04-allonline-bt-des.jpg",
+                "https://media.allonline.7eleven.co.th/original/721255-05-allonline-bt-des.jpg",
+                "https://media.allonline.7eleven.co.th/original/721255-06-allonline-bt-des.jpg",
+                "https://media.allonline.7eleven.co.th/original/721255-tis-allonline-bt.jpg"
             ],
-            "url_video": [
-                "https://youtu.be/PHhUmqDNHmQ"
-            ],
+            "url_video": [],
             "how_use": [
-                "ทาเคลียร์โนส ดาร์ค สป็อต ไบรท์ โซลูชั่น เซรั่ม ให้ทั่วใบหน้า โดยเน้นบริเวณที่เป็นรอยจุดด่างดำ จุดที่สีผิวไม่สม่ำเสมอ",
-                "ควรใช้เป็นประจำอย่างน้อยวันละ 2 ครั้ง หรือตามต้องการ"
+                "ใช้สำหรับจัดแต่งทรงผม"
             ],
-            "type": "sunscreen"
+            "type": "hair"
         },
         {
             "id": "b002",
-            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdmain/723291-00-allonline-bt.jpg",
-            "name": "Clear Nose เซรั่มบำรุงผิวหน้า Dark Spot Bright Solution Serum 28 กรัม",
-            "price": 189,
-            "register_number": "11-1-6400003874",
-            "size": "(กxยxส) 7x3x15 ซม.",
-            "weight": "0.07 กก.",
-            "long_detail": "ช่วยลดเลือนรอยดำให้ดูจางลงด้วยสารสกัดจากดอกแซนด์ ลิลลี่ วิตามินซี คอลลาเจน และไฮยาลูรอน 8 โมเลกุล ซึ่งเปรียบเสมือนองครักษ์พิทักษ์ผิว พร้อมทั้งล็อคความชุ่มชื้น ผสานพลังบำรุงผิวโทรมให้กลับมาสดใสด้วย RBA Technology เน้นบำรุงผิวอย่างตรงจุดให้ผิวดูกระจ่างใส เรียบเนียน สม่ำเสมอ Rainbow Algae Technology ช่วยให้ผิวแลดูเรียบเนียน ผิวดูสม่ำเสมอ โกลว กระจ่างใส ผลลัพธ์ที่ได้ขึ้นอยู่กับสภาพผิวของแต่ละบุคคล",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/658750-00-hair-drying-styling-tools-gaabor.jpg",
+            "name": "Gaabor เครื่องหนีบผม Hair curl stylist รุ่น GHC-N65A",
+            "price": 399,
+            "register_number": "",
+            "size": "(กxยxส) 34x8.5x6 ซม.",
+            "weight": "0.39 กก.",
+            "long_detail": "เครื่องหนีบผม Gaabor GHC-N65A ปรับอุณหภูมิได้มากถึง 5 ระดับ สามารถใช้งานได้กับทุกสภาพเส้นผม วัสดุ PTC ร้อนเร็ว ใช้เวลาจัดแต่งทรงผมน้อยลง หน้าจอดิจิตอล สวยงาม ทันสมัย การใช้งานเรียบง่าย มือใหม่ก็ใช้ได้",
             "url_image": [
-                "https://media.shopat24.com/original/666626-01-allonline-bt-des.jpg",
-                "https://media.shopat24.com/original/666626-02-allonline-bt-des.jpg"
+                "https://media.shopat24.com/original/658750-01-hair-drying-styling-tools-gaabor-detail.jpg",
+                "https://media.shopat24.com/original/658750-02-hair-drying-styling-tools-gaabor-detail.jpg",
+                "https://media.shopat24.com/original/658750-03-hair-drying-styling-tools-gaabor-detail.jpg",
+                "https://media.shopat24.com/original/658750-04-hair-drying-styling-tools-gaabor-detail.jpg",
+                "https://media.shopat24.com/original/658750-05-hair-drying-styling-tools-gaabor-detail.jpg",
+                "https://media.shopat24.com/original/658750-06-hair-drying-styling-tools-gaabor-detail.jpg",
+                "https://media.shopat24.com/original/658750-TIS-Beauty-v1.jpg"
             ],
-            "url_video": [
-                "https://youtu.be/PHhUmqDNHmQ"
-            ],
+            "url_video": [],
             "how_use": [
-                "ทาเคลียร์โนส ดาร์ค สป็อต ไบรท์ โซลูชั่น เซรั่ม ให้ทั่วใบหน้า โดยเน้นบริเวณที่เป็นรอยจุดด่างดำ จุดที่สีผิวไม่สม่ำเสมอ",
-                "ควรใช้เป็นประจำอย่างน้อยวันละ 2 ครั้ง หรือตามต้องการ"
+                "ใช้เพื่อจัดแต่งทรงผม"
             ],
-            "type": "scrub"
+            "type": "hair"
         },
         {
             "id": "b003",
-            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdmain/723291-00-allonline-bt.jpg",
-            "name": "Clear Nose เซรั่มบำรุงผิวหน้า Dark Spot Bright Solution Serum 28 กรัม",
-            "price": 189,
-            "register_number": "11-1-6400003874",
-            "size": "(กxยxส) 7x3x15 ซม.",
-            "weight": "0.07 กก.",
-            "long_detail": "ช่วยลดเลือนรอยดำให้ดูจางลงด้วยสารสกัดจากดอกแซนด์ ลิลลี่ วิตามินซี คอลลาเจน และไฮยาลูรอน 8 โมเลกุล ซึ่งเปรียบเสมือนองครักษ์พิทักษ์ผิว พร้อมทั้งล็อคความชุ่มชื้น ผสานพลังบำรุงผิวโทรมให้กลับมาสดใสด้วย RBA Technology เน้นบำรุงผิวอย่างตรงจุดให้ผิวดูกระจ่างใส เรียบเนียน สม่ำเสมอ Rainbow Algae Technology ช่วยให้ผิวแลดูเรียบเนียน ผิวดูสม่ำเสมอ โกลว กระจ่างใส ผลลัพธ์ที่ได้ขึ้นอยู่กับสภาพผิวของแต่ละบุคคล",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/308240_00_lesasha_wonder_3in1_hot_air_styler_ls1249.jpg",
+            "name": "Lesasha ไดร์จัดแต่งทรงผม Wonder 3IN1 Hot Air Styler รุ่น LS1249 - ชมพู/ขาว",
+            "price": 590,
+            "register_number": "",
+            "size": "(กxยxส) 8x8x40 ซม.",
+            "weight": "0.3 กก.",
+            "long_detail": "LESASHA ไดร์จัดแต่งทรงผม เลอซาช่า รุ่น WONDER 3 IN 1 HOT AIR STYLER LS1249 มีลมเย็น เป่า, หวีตรง, ยกโคน, ม้วนลอน (ฟรี! 3 หัวเปลี่ยน) เลอซาช่า รุ่น วอนเดอร์ ทรีอินวัน “เป่าแห้ง ยกโคน จัดทรง เพิ่มวอลลุ่ม ได้ในขั้นตอนเดียว”",
             "url_image": [
-                "https://media.shopat24.com/original/666626-01-allonline-bt-des.jpg",
-                "https://media.shopat24.com/original/666626-02-allonline-bt-des.jpg"
+                "https://media.shopat24.com/original/308240_01_detail_lesasha_wonder_3in1_hot_air_styler_ls1249.jpg",
+                "https://media.shopat24.com/original/308240_02_detail_lesasha_wonder_3in1_hot_air_styler_ls1249.jpg",
+                "https://media.shopat24.com/original/308240_03_detail_lesasha_wonder_3in1_hot_air_styler_ls1249.jpg",
+                "https://media.shopat24.com/original/308240_04_detail_lesasha_wonder_3in1_hot_air_styler_ls1249.jpg",
+                "https://media.shopat24.com/original/308240-TIS-Beauty.jpg"
             ],
             "url_video": [
-                "https://youtu.be/PHhUmqDNHmQ"
+                "https://youtu.be/dijUiYzDjYU",
+                "https://youtu.be/IuFRqNlFenk"
             ],
             "how_use": [
-                "ทาเคลียร์โนส ดาร์ค สป็อต ไบรท์ โซลูชั่น เซรั่ม ให้ทั่วใบหน้า โดยเน้นบริเวณที่เป็นรอยจุดด่างดำ จุดที่สีผิวไม่สม่ำเสมอ",
-                "ควรใช้เป็นประจำอย่างน้อยวันละ 2 ครั้ง หรือตามต้องการ"
+                "จัดแต่งทรงผม"
             ],
-            "type": "scrub"
+            "type": "hair"
         },
         {
             "id": "b004",
-            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdmain/723291-00-allonline-bt.jpg",
-            "name": "Clear Nose เซรั่มบำรุงผิวหน้า Dark Spot Bright Solution Serum 28 กรัม",
-            "price": 189,
-            "register_number": "11-1-6400003874",
-            "size": "(กxยxส) 7x3x15 ซม.",
-            "weight": "0.07 กก.",
-            "long_detail": "ช่วยลดเลือนรอยดำให้ดูจางลงด้วยสารสกัดจากดอกแซนด์ ลิลลี่ วิตามินซี คอลลาเจน และไฮยาลูรอน 8 โมเลกุล ซึ่งเปรียบเสมือนองครักษ์พิทักษ์ผิว พร้อมทั้งล็อคความชุ่มชื้น ผสานพลังบำรุงผิวโทรมให้กลับมาสดใสด้วย RBA Technology เน้นบำรุงผิวอย่างตรงจุดให้ผิวดูกระจ่างใส เรียบเนียน สม่ำเสมอ Rainbow Algae Technology ช่วยให้ผิวแลดูเรียบเนียน ผิวดูสม่ำเสมอ โกลว กระจ่างใส ผลลัพธ์ที่ได้ขึ้นอยู่กับสภาพผิวของแต่ละบุคคล",
-            "url_image": [
-                "https://media.shopat24.com/original/666626-01-allonline-bt-des.jpg",
-                "https://media.shopat24.com/original/666626-02-allonline-bt-des.jpg"
-            ],
-            "url_video": [
-                "https://youtu.be/PHhUmqDNHmQ"
-            ],
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/399758_00_gillette_mach3.jpg",
+            "name": "ยิลเลตต์ มัคทรี ใบมีด 3 ชิ้น",
+            "price": 339,
+            "register_number": "",
+            "size": "(กxยxส) 2.5x10.5x11.5 ซม.",
+            "weight": "0.03 กก.",
+            "long_detail": "ยิลเลตต์ มัคทรี ใบมีดโกน 3 ชิ้น ที่โกนหนวด MACH3 ยังคงสืบทอดตำนานดั้งเดิมของการโกนหนวดที่ใกล้ชิดเรียบเนียนกว่า โดยเทคโนโลยีสามใบมีดจะทำให้การโกนหนวดสะดวกสบาย นอกจากนี้ ยังสามารถใช้งานได้นานเนื่องจากมีใบมีดที่เปลี่ยนได้ และ Comfort Guard ที่มีระบบ Microfins 5 ชิ้น ก็ยังจะช่วยให้การโกนใกล้ชิดเรียบเนียนและสะดวกสบาย ในขณะที่แถบ Indicator® Lubrication Strip จะช่วยแจ้งเตือนว่าอุปกรณ์มีประสิทธิภาพลดลงเพื่อให้คุณเปลี่ยนใบมีด MACH3 ยังเป็นผลิตภัณฑ์ที่ทำให้ท่านสุภาพบุรุษทั่วโลกเริ่มเช้าวันใหม่ได้อย่างสดชื่นเบิกบาน",
+            "url_image": [],
+            "url_video": [],
             "how_use": [
-                "ทาเคลียร์โนส ดาร์ค สป็อต ไบรท์ โซลูชั่น เซรั่ม ให้ทั่วใบหน้า โดยเน้นบริเวณที่เป็นรอยจุดด่างดำ จุดที่สีผิวไม่สม่ำเสมอ",
-                "ควรใช้เป็นประจำอย่างน้อยวันละ 2 ครั้ง หรือตามต้องการ"
+                "ใช้สำหรับเปลี่ยนหัวด้ามมีด Gillette Mach 3"
             ],
-            "type": "mask"
+            "type": "beard"
         },
         {
             "id": "b005",
-            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdmain/723291-00-allonline-bt.jpg",
-            "name": "Clear Nose เซรั่มบำรุงผิวหน้า Dark Spot Bright Solution Serum 28 กรัม",
-            "price": 189,
-            "register_number": "11-1-6400003874",
-            "size": "(กxยxส) 7x3x15 ซม.",
-            "weight": "0.07 กก.",
-            "long_detail": "ช่วยลดเลือนรอยดำให้ดูจางลงด้วยสารสกัดจากดอกแซนด์ ลิลลี่ วิตามินซี คอลลาเจน และไฮยาลูรอน 8 โมเลกุล ซึ่งเปรียบเสมือนองครักษ์พิทักษ์ผิว พร้อมทั้งล็อคความชุ่มชื้น ผสานพลังบำรุงผิวโทรมให้กลับมาสดใสด้วย RBA Technology เน้นบำรุงผิวอย่างตรงจุดให้ผิวดูกระจ่างใส เรียบเนียน สม่ำเสมอ Rainbow Algae Technology ช่วยให้ผิวแลดูเรียบเนียน ผิวดูสม่ำเสมอ โกลว กระจ่างใส ผลลัพธ์ที่ได้ขึ้นอยู่กับสภาพผิวของแต่ละบุคคล",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/717126-00-allonline-bt.jpg",
+            "name": "Ashley ชุดมีดกันคิ้ว Eyebrow Applicator (2 ชิ้น/ชุด)",
+            "price": 109,
+            "register_number": "",
+            "size": "(กxยxส) 6.3x0.8x18.5 ซม.",
+            "weight": "0.02 กก.",
+            "long_detail": "อุปกรณ์จัดแต่งทรงคิ้ว ออกมาให้จับกระชับมือ สามารถใช้งานได้ในบริเวณที่เข้าถึงยาก ใบมีดคมไม่ต้องออกแรงให้ผิวระคายเคือง",
             "url_image": [
-                "https://media.shopat24.com/original/666626-01-allonline-bt-des.jpg",
-                "https://media.shopat24.com/original/666626-02-allonline-bt-des.jpg"
+                "https://media.shopat24.com/original/717126-01-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/717126-02-allonline-bt-des.jpg"
+            ],
+            "url_video": [],
+            "how_use": [
+                "ใช้แปรงปัดขนคิ้วให้เรียงเป็นระเบียบ",
+                "ใช้ดินสอเขียนคิ้วเป็นทรงตามต้องการ",
+                "ใช้มีดกันคิ้ว กันส่วนที่เกินออกให้หมด",
+                "ลบคิ้วที่เขียนไวด้วยสำลีชุบที่เช็ดเครื่องสำอาง จากนั้นใช้แปรงเซ็ตคิ้วให้เรียงเส้นสวย"
+            ],
+            "type": "beard"
+        },
+        {
+            "id": "b006",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/681914-00-allonline-bt.jpg",
+            "name": "Fineblue เครื่องโกนหนวดไฟฟ้าแบบไร้สาย Mini Silver IPX6 - Silver",
+            "price": 159,
+            "register_number": "",
+            "size": "(กxยxส) 9x3x17.5 ซม.",
+            "weight": "0.03 กก.",
+            "long_detail": "เครื่องโกนหนวดไฟฟ้าแบบไร้สาย พร้อมแปรงทำความสะอาด สีเงิน แรงดันไฟฟ้า 3.7V 2W ระบบกันน้ำ IPX6 มีไฟแสดงสถานะแบตเตอรี่ 5 ส่วน ชาร์จด้วยสาย USB to Micro ระยะเวลาในการชาร์จเต็ม 1-2 ชั่วโมง โกนได้ 360 องศา ด้วยการออกแบบตาข่ายรังผึ้งแบบหมุนรอบด้าน วัสดุภายนอก ทำด้วยอลูมิเนียมคุณภาพ กันลื่น กันหล่น กันน้ำ ป้องกันรอยขีดข่วน",
+            "url_image": [
+                "https://media.shopat24.com/original/681914-01-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/681914-02-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/681914-03-allonline-bt-des.jpg"
+            ],
+            "url_video": [],
+            "how_use": [
+                "ดึงฝาครอบออก",
+                "กดปุ่มเปิด/ปิด เพื่อใช้งาน",
+                "หลังใช้งานเสร็จ หมุนหัวตัดออกทำความสะอาดด้วยน้ำหรือแปรงทำความสะอาด"
+            ],
+            "type": "beard"
+        },
+        {
+            "id": "b007",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/717125-00-allonline-bt.jpg",
+            "name": "Ashley ชุดอุปกรณ์สำหรับกดสิว Pimple Blackhead Remover Set (2 ชิ้น/ชุด)",
+            "price": 99,
+            "register_number": "",
+            "size": "(กxยxส) 5.6x1.8x18 ซม.",
+            "weight": "0.02 กก.",
+            "long_detail": "อุปกรณ์กดสิว ทำจากวัสดุอย่างดีแข็งแรง มีคุณภาพใช้กดได้ทุกสภาพผิว",
+            "url_image": [
+                "https://media.shopat24.com/original/717125-01-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/717125-02-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/717125-03-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/717125-04-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/717125-05-allonline-bt-des.jpg"
+            ],
+            "url_video": [],
+            "how_use": [
+                "เตรียมอุปกรณ์โดยการเช็ดด้วยสำลีชุปแอลกอฮอลล์",
+                "ล้างหน้าและมือให้สะอาด",
+                "ประคบใบหน้าหรือจมูกด้วยผ้าขนหนูผืนเล็กชุบน้ำอุ่นบิดหมาดๆ เพื่อเปิดรูขุมขนให้สามารถดึงสิวออกมาได้ง่าย",
+                "สำหรับสิวที่โผล่พ้นผิวออกมาแล้ว ให้ใช้อุปกรณ์หนีบหรือดึงสิวเสี้ยนขึ้นมาได้เลย สำหรับสิวที่ยังไม่โผล่พ้นผิวแนะนำให้ใช้อุปกรณ์กดที่ผิวเบาๆ แล้วหนีบสิวขึ้นมา ไม่แนะนำให้กดแรงเกินไป อาจจะทำให้เกิดการอักเสบหรืออุดตันได้"
+            ],
+            "type": "face"
+        },
+        {
+            "id": "b008",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/717127-00-allonline-bt.JPG",
+            "name": "Ashley อุปกรณ์สำหรับกดสิว Blackhead Remover",
+            "price": 129,
+            "register_number": "",
+            "size": "(กxยxส) 6.3x0.6x18.3 ซม.",
+            "weight": "0.01 กก.",
+            "long_detail": "อุปกรณ์สำหรับกดสิว ใช้กดได้ทุกสภาพผิว แข็งแรง มีคุณภาพ",
+            "url_image": [
+                "https://media.shopat24.com/original/717127-01-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/717127-02-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/717127-03-allonline-bt-des.jpg",
+                "https://media.shopat24.com/original/717127-04-allonline-bt-des.jpg"
+            ],
+            "url_video": [],
+            "how_use": [
+                "เตรียมอุปกรณ์โดยการเช็ดด้วยสำลีชุปแอลกอฮอลล์",
+                "ล้างหน้าและมือให้สะอาด",
+                "ประคบใบหน้าหรือจมูกด้วยผ้าขนหนูผืนเล็กชุบน้ำอุ่นบิดหมาดๆ เพื่อเปิดรูขุมขนให้สามารถดึงสิวออกมาได้ง่าย"
+            ],
+            "type": "face"
+        },
+        {
+            "id": "b009",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/535524-00-toothbrush-sujian.jpg",
+            "name": "Sujian แปรงสีฟันไฟฟ้า Electric Toothbrush รุ่น J-802",
+            "price": 99,
+            "register_number": "ฆพ.505/2565 - 652320001315",
+            "size": "(กxยxส) 5.3x2.7x20.5 ซม.",
+            "weight": "0.08 กก.",
+            "long_detail": "แปรงสีฟันไฟฟ้า Electric Toothbrush รุ่น J-802 ใครที่ชอบกินชา กาแฟบ่อยๆ จนทำให้เกิดปัญหาฟันมีคราบเหลืองฝังแน่น การใช้แปรงสีฟันธรรมดาก็คงจะทำความสะอาดได้ไม่ดีพอ แต่แปรงสีฟันไฟฟ้าช่วยคุณได้เพราะมีคุณสมบัติช่วยทำความสะอาดฟันได้ดีกว่า ขัดคราบสกปรกได้ทุกซอกทุกมุมพร้อมถนอมเหงือกในเวลาเดียวกัน ทำให้สุขภาพช่องปากและฟังแข็งแรง ดีไซน์มินิมอลทันสมัย แปรงสีฟันไฟฟ้า Electric Toothbrush รุ่น J-802 ออกแบบสไตล์มินิมอล เรียบง่าย มีให้เลือกถึง 3 สี คือสี ขาว สีชมพู และสีฟ้า มาพร้อมกับหัวแปรงสีฟันฟ้าจำนวน 4 ชิ้น ใช้งานง่ายมากๆ มีความถี่ในการสั่น 32000 ครั้ง/นาที ทำให้ขจัดคราบสกปรกได้สะอาดหมดจด ฟันสวยเปล่งประกาย มั่นใจทุกครั้งที่ยิ้ม",
+            "url_image": [
+                "https://media.shopat24.com/original/535525-01-toothbrush-sujian-detail.jpg",
+                "https://media.shopat24.com/original/535525-02-toothbrush-sujian-detail-v1.jpg",
+                "https://media.shopat24.com/original/535525-03-toothbrush-sujian-detail-v1.jpg",
+                "https://media.shopat24.com/original/535525-04-toothbrush-sujian-detail-v1.jpg"
             ],
             "url_video": [
-                "https://youtu.be/PHhUmqDNHmQ"
+                "https://youtu.be/1gHFhf8-bME"
             ],
             "how_use": [
-                "ทาเคลียร์โนส ดาร์ค สป็อต ไบรท์ โซลูชั่น เซรั่ม ให้ทั่วใบหน้า โดยเน้นบริเวณที่เป็นรอยจุดด่างดำ จุดที่สีผิวไม่สม่ำเสมอ",
-                "ควรใช้เป็นประจำอย่างน้อยวันละ 2 ครั้ง หรือตามต้องการ"
+                "หมุนทวนเข็มนาฬิกา เพื่อเปิดฝาครอบแบตเตอรี่ด้านล่าง",
+                "ใส่ถ่านขนาด AA 1.5 โวลต์ จำนวน 1 ก้อน",
+                "ใส่หัวแปรงแล้วหมุน เพื่อล็อกหัวแปรง",
+                "กดปุ่มเพื่อ เปิด-ปิด หลังใส่หัวแปรง",
+                "ระยะเวลาแปรงฟัน ทันตแพทย์แนะนำให้แปรงฟันครั้งละ 2 นาที"
             ],
-            "type": "sunscreen"
+            "type": "mouth"
+        },
+        {
+            "id": "b010",
+            "url_thumbnail": "https://media.allonline.7eleven.co.th/pdzoom/386689-00-oral-care-tools-colgate-v2.jpg",
+            "name": "คอลเกต แปรงสีฟันไฟฟ้า 360 องศา ชาร์โคล",
+            "price": 495,
+            "register_number": "",
+            "size": "(กxยxส) 5.4x3.6x22.9 ซม.",
+            "weight": "0.106 กก.",
+            "long_detail": "แปรงสีฟันไฟฟ้า คอลเกต 360 ชาร์โคล เหมาะสมกับผู้ใหญ่ แปรงฟันวันละ 2 ครั้ง เช้าและก่อนนอน ใช้กับถ่านอัลคาไลน์ AAA",
+            "url_image": [
+                "https://media.shopat24.com/original/386689-01-New-Packaging-Nivea-v1.jpg.jpg",
+                "https://media.shopat24.com/original/386689-02-New-Packaging-Nivea-v1.jpg.jpg"
+            ],
+            "url_video": [],
+            "how_use": [
+                "ใช้แปรงทำความสะอาดฟันและช่องปาก"
+            ],
+            "type": "mouth"
         }
     ]
 }

@@ -9,6 +9,7 @@ import CategoryHeader from './components/categoryheader';
 import Image from 'next/image';
 import IconBanner from './assets/icons/banner/webp_Strip-1200x150-Head-232167-0.webp';
 import IconBanner1 from './assets/icons/banner/webp_Strip-1200x150-555-1-232184-0.webp';
+import IconBanner2 from './assets/icons/banner/webp_Strip-1200x150-555-3-232186-0.webp';
 
 import IconBanner1_1 from './assets/icons/banner/1.webp';
 import IconBanner1_2 from './assets/icons/banner/2.webp';
@@ -24,6 +25,8 @@ import data3 from '@/public/data/beauty_accessary.json';
 
 import { motion } from 'framer-motion';
 import CategoriesGrid from './CategoriesGrid';
+import { ArrowUp } from 'lucide-react';
+import ProductListAll from './components/ProductListAll';
 
 export default function Home() {
   const promos = [IconPromo1, IconPromo2, IconPromo3];
@@ -37,6 +40,21 @@ export default function Home() {
     }, 3500);
     return () => clearInterval(interval);
   }, []);
+
+  const products = [
+    ...data1.Facial_care.map((item: any) => ({
+      ...item,
+      category: 'facial_care',
+    })),
+    ...data2.Cosmetics.map((item: any) => ({
+      ...item,
+      category: 'cosmetics',
+    })),
+    ...data3.Beauty_accessary.map((item: any) => ({
+      ...item,
+      category: 'beauty_accessary',
+    })),
+  ];
 
   return (
     <div className="flex min-h-screen flex-col bg-white font-sans text-zinc-800">
@@ -112,7 +130,7 @@ export default function Home() {
         </div>
 
         {/* เนื้อหาตัวอย่างสินค้าแต่ละหมวดหมู่ */}
-        <section className="my-12">
+        <section className="mt-2">
           {/* ดูแลผิวหน้า */}
           <div className="w-full">
             <Image
@@ -123,7 +141,7 @@ export default function Home() {
               className="w-full rounded-lg object-cover"
               priority
             />
-            <div className="flex overflow-x-auto space-x-4 py-4 scrollbar-hide">
+            <div className="flex overflow-x-auto space-x-4 py-2 scrollbar-hide">
               <div className="flex overflow-x-auto space-x-4 py-4 scrollbar-hide">
                 {data1.Facial_care.map((item: any, index: any) => (
                   <div
@@ -151,8 +169,7 @@ export default function Home() {
                       <p className="font-medium line-clamp-2">{item.name}</p>
                       <div className="mt-2 text-right">
                         <p className="text-gray-400 line-through text-xs">
-                          ฿ {(item.price).toFixed(2)}
-
+                          ฿ {item.price.toFixed(2)}
                         </p>
                         <p className="text-green-600 font-semibold">
                           ฿ {(item.price - item.price * 0.23).toFixed(2)}
@@ -164,6 +181,19 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* 🩷 Banner สินค้าใหม่สวยก่อนใคร */}
+          <div className="w-full">
+            <Image
+              src={IconBanner2}
+              alt="Beauty Banner"
+              width={1200}
+              height={150}
+              className="w-full rounded-lg object-cover"
+              priority
+            />
+          </div>
+
           {/* เครื่องสำอาง */}
           <div className="w-full">
             <Image
@@ -178,9 +208,7 @@ export default function Home() {
               {data2.Cosmetics.map((item: any, index: any) => (
                 <div
                   key={index}
-                  onClick={() =>
-                    router.push(`/category/cosmetics/${item.id}`)
-                  }
+                  onClick={() => router.push(`/category/cosmetics/${item.id}`)}
                   className="flex-shrink-0 w-48 bg-white hover:shadow-md transition-all duration-200 cursor-pointer"
                 >
                   {/* ✅ รูปภาพสินค้า */}
@@ -201,11 +229,10 @@ export default function Home() {
                     <p className="font-medium line-clamp-2">{item.name}</p>
                     <div className="mt-2 text-right">
                       <p className="text-gray-400 line-through text-xs">
-                        ฿ {(item.price).toFixed(2)}
-
+                        ฿ {item.price.toFixed(2)}
                       </p>
                       <p className="text-green-600 font-semibold">
-                          ฿ {(item.price - item.price * 0.23).toFixed(2)}
+                        ฿ {(item.price - item.price * 0.23).toFixed(2)}
                       </p>
                     </div>
                   </div>
@@ -250,11 +277,10 @@ export default function Home() {
                     <p className="font-medium line-clamp-2">{item.name}</p>
                     <div className="mt-2 text-right">
                       <p className="text-gray-400 line-through text-xs">
-                        ฿ {(item.price).toFixed(2)}
-
+                        ฿ {item.price.toFixed(2)}
                       </p>
                       <p className="text-green-600 font-semibold">
-                          ฿ {(item.price - item.price * 0.23).toFixed(2)}
+                        ฿ {(item.price - item.price * 0.23).toFixed(2)}
                       </p>
                     </div>
                   </div>
@@ -263,7 +289,22 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <ProductListAll title={"all"} products={products} />
       </main>
+
+      {window.scrollY > 10 ? <button
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        }}
+        className="fixed bottom-6 right-6 p-3 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all z-50"
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="w-5 h-5" />
+      </button> : null}
 
       {/* ✅ Footer */}
       <Footer />

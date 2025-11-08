@@ -63,8 +63,15 @@ export default async function CategoryPage({ params }: PageProps) {
   const typeNameMap_3: Record<string, string> = {
     hair: 'อุปกรณ์ทำผม',
     beard: 'อุปกรณ์กำจัดขน',
-    face: 'อุปกรณ์ดูแลผิวหน้า',
     mouth: 'อุปกรณ์ดูแลช่องปาก',
+    face: 'อุปกรณ์ดูแลผิวหน้า',
+  };
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
@@ -99,7 +106,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 2 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('scrub')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPro3}
                   alt="ทำความสะอาดผิวหน้า"
@@ -109,7 +119,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 3 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('sunscreen')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPro4}
                   alt="ทำความสะอาดผิวหน้า"
@@ -129,7 +142,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 5 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('cleansing')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPro5}
                   alt="ทำความสะอาดผิวหน้า"
@@ -139,7 +155,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 6 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('mask')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPro6}
                   alt="ทำความสะอาดผิวหน้า"
@@ -156,7 +175,10 @@ export default async function CategoryPage({ params }: PageProps) {
               (typeName) => (
                 <div key={typeName}>
                   {/* 🔹 หัวข้อหมวดหมู่ */}
-                  <h2 className="text-green-600 w-full text-md font-semibold my-2 border-b-2 border-green-600 pb-2">
+                  <h2
+                    id={typeName}
+                    className="text-green-600 w-full text-md font-semibold my-2 border-b-2 border-green-600 pb-2"
+                  >
                     <span className="ml-3">
                       {typeNameMap_1[typeName] || typeName || 'ไม่ระบุประเภท'}
                     </span>
@@ -194,12 +216,10 @@ export default async function CategoryPage({ params }: PageProps) {
                             {/* ✅ ราคา */}
                             <div className="mt-2 flex flex-col gap-0.25 items-end">
                               <span className="text-gray-400 line-through text-sm">
-                                ฿ {(item.price).toFixed(2)}
-
+                                ฿ {item.price.toFixed(2)}
                               </span>
                               <span className="text-red-600 font-bold">
                                 ฿ {(item.price - item.price * 0.23).toFixed(2)}
-
                               </span>
                             </div>
                           </div>
@@ -238,7 +258,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 2 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('facial_makeup')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPre3}
                   alt="ทำความสะอาดผิวหน้า"
@@ -248,7 +271,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 3 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('eye_makeup')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPre4}
                   alt="ทำความสะอาดผิวหน้า"
@@ -268,7 +294,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 5 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('cheek_makeup')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPre5}
                   alt="ทำความสะอาดผิวหน้า"
@@ -278,7 +307,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 6 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('lips')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPre6}
                   alt="ทำความสะอาดผิวหน้า"
@@ -289,9 +321,9 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
 
             {/* หัวข้อ */}
-            <h2 className="text-green-600 w-full  text-md font-semibold my-4 border-b-2 border-green-600 pb-2">
+            {/* <h2 className="text-green-600 w-full  text-md font-semibold my-4 border-b-2 border-green-600 pb-2">
               <span className="ml-3">ผิวหน้า</span>
-            </h2>
+            </h2> */}
           </section>
 
           {/* 🔹 Grid แสดงสินค้า */}
@@ -300,7 +332,10 @@ export default async function CategoryPage({ params }: PageProps) {
               (typeName) => (
                 <div key={typeName}>
                   {/* 🔹 หัวข้อหมวดหมู่ */}
-                  <h2 className="text-green-600 w-full text-md font-semibold my-2 border-b-2 border-green-600 pb-2">
+                  <h2
+                    id={typeName}
+                    className="text-green-600 w-full text-md font-semibold my-2 border-b-2 border-green-600 pb-2"
+                  >
                     <span className="ml-3">
                       {typeNameMap_2[typeName] || typeName || 'ไม่ระบุประเภท'}
                     </span>
@@ -338,12 +373,10 @@ export default async function CategoryPage({ params }: PageProps) {
                             {/* ✅ ราคา */}
                             <div className="mt-2 flex flex-col gap-0.25 items-end">
                               <span className="text-gray-400 line-through text-sm">
-                                ฿ {(item.price).toFixed(2)}
-
+                                ฿ {item.price.toFixed(2)}
                               </span>
                               <span className="text-red-600 font-bold">
                                 ฿ {(item.price - item.price * 0.23).toFixed(2)}
-
                               </span>
                             </div>
                           </div>
@@ -382,7 +415,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 2 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('hair')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPri3}
                   alt="ทำความสะอาดผิวหน้า"
@@ -392,7 +428,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 3 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('beard')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPri4}
                   alt="ทำความสะอาดผิวหน้า"
@@ -412,7 +451,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 5 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('mouth')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPri5}
                   alt="ทำความสะอาดผิวหน้า"
@@ -422,7 +464,10 @@ export default async function CategoryPage({ params }: PageProps) {
               </div>
 
               {/* กล่อง 6 */}
-              <div className="relative w-full h-24 overflow-hidden">
+              <div
+                onClick={() => scrollToSection('face')}
+                className="relative w-full h-24 overflow-hidden"
+              >
                 <Image
                   src={IconPri6}
                   alt="ทำความสะอาดผิวหน้า"
@@ -433,9 +478,9 @@ export default async function CategoryPage({ params }: PageProps) {
             </div>
 
             {/* หัวข้อ */}
-            <h2 className="text-green-600 w-full  text-md font-semibold my-4 border-b-2 border-green-600 pb-2">
+            {/* <h2 className="text-green-600 w-full  text-md font-semibold my-4 border-b-2 border-green-600 pb-2">
               <span className="ml-3">อุปกรณ์ทำผม</span>
-            </h2>
+            </h2> */}
           </section>
 
           {/* 🔹 Grid แสดงสินค้า */}
@@ -444,7 +489,10 @@ export default async function CategoryPage({ params }: PageProps) {
               (typeName) => (
                 <div key={typeName}>
                   {/* 🔹 หัวข้อหมวดหมู่ */}
-                  <h2 className="text-green-600 w-full text-md font-semibold my-2 border-b-2 border-green-600 pb-2">
+                  <h2
+                    id={typeName}
+                    className="text-green-600 w-full text-md font-semibold my-2 border-b-2 border-green-600 pb-2"
+                  >
                     <span className="ml-3">
                       {typeNameMap_3[typeName] || typeName || 'ไม่ระบุประเภท'}
                     </span>
@@ -482,12 +530,10 @@ export default async function CategoryPage({ params }: PageProps) {
                             {/* ✅ ราคา */}
                             <div className="mt-2 flex flex-col gap-0.25 items-end">
                               <span className="text-gray-400 line-through text-sm">
-                                ฿ {(item.price).toFixed(2)}
-
+                                ฿ {item.price.toFixed(2)}
                               </span>
                               <span className="text-red-600 font-bold">
                                 ฿ {(item.price - item.price * 0.23).toFixed(2)}
-
                               </span>
                             </div>
                           </div>
