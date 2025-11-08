@@ -80,7 +80,7 @@ export default async function CategoryPage({ params }: PageProps) {
                   </div>
 
                   {/* 🔽 เพิ่มส่วนข้อมูลรายละเอียดสินค้าแบบในภาพ */}
-                  <div className="mt-4 pt-3 text-[20px] text-gray-700 space-y-2">
+                  <div className="mt-4 pt-3 text-md text-gray-700 space-y-2">
                     <div className="flex justify-between border-b border-gray-300 pb-2">
                       <span className="font-bold">
                         เลขที่อย. / เลขที่จดแจ้ง

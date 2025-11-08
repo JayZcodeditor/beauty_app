@@ -9,6 +9,7 @@ interface Product {
   name: string;
   price: number;
   url_thumbnail: string;
+  category: string;
 }
 
 interface ProductListAllProps {
@@ -94,7 +95,10 @@ export default function ProductListAll({
           <div
             key={item.id}
             className="flex-shrink-0 w-full rounded-lg p-3 bg-white hover:shadow-md transition relative cursor-pointer"
-            onClick={() => router.push(`/category/${title}/${item.id}`)}
+            onClick={() => {
+              const category = title === 'all' ? item.category : title; // ถ้า title เป็น "all" ใช้ item.category
+              router.push(`/category/${category}/${item.id}`);
+            }}
           >
             {/* ✅ รูปสินค้า */}
             <div className="flex justify-center items-center mb-3 border border-gray-200">
@@ -115,12 +119,10 @@ export default function ProductListAll({
             {/* ✅ ราคา */}
             <div className="mt-2 flex flex-col gap-0.25 items-end">
               <span className="text-gray-400 line-through text-sm">
-                ฿ {(item.price).toFixed(2)}
-
+                ฿ {item.price.toFixed(2)}
               </span>
               <span className="text-red-600 font-bold">
                 ฿ {(item.price - item.price * 0.23).toFixed(2)}
-
               </span>
             </div>
           </div>
