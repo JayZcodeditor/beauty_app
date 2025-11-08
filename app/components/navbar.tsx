@@ -40,7 +40,7 @@ export default function Navbar() {
       item.name.toLowerCase().includes(query.toLowerCase())
     );
     setResults(filtered.slice(0, 10)); // limit 10 results
-  }, [query,]);
+  }, [query]);
 
   return (
     <>

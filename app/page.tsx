@@ -56,6 +56,20 @@ export default function Home() {
     })),
   ];
 
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    // ตรวจสอบ scroll position ฝั่ง client
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // เช็คตอน mount ด้วย
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="flex min-h-screen flex-col bg-white font-sans text-zinc-800">
       {/* ✅ Navbar */}
@@ -290,21 +304,23 @@ export default function Home() {
           </div>
         </section>
 
-        <ProductListAll title={"all"} products={products} />
+        <ProductListAll title={'all'} products={products} />
       </main>
 
-      {window.scrollY > 10 ? <button
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          });
-        }}
-        className="fixed bottom-6 right-6 p-3 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all z-50"
-        aria-label="Scroll to top"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button> : null}
+      {!showButton ? null : (
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            });
+          }}
+          className="fixed bottom-6 right-6 p-3 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 transition-all z-50"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
+      )}
 
       {/* ✅ Footer */}
       <Footer />
