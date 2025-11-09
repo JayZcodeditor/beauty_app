@@ -7,6 +7,9 @@ import data2 from '@/public/data/cosmetics.json';
 import data3 from '@/public/data/beauty_accessary.json';
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+
+import IconLogo from '../assets/icons/logo.png';
 
 export default function Navbar() {
   const router = useRouter();
@@ -57,9 +60,17 @@ export default function Navbar() {
 
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-lg font-semibold text-green-600">
+            {/* <span className="text-lg font-semibold text-green-600">
               ALL ONLINE
-            </span>
+            </span> */}
+            <Image
+              src={IconLogo}
+              alt="Beauty Logo"
+              width={1200}
+              height={100}
+              className="w-full rounded-lg object-cover"
+              priority
+            />
           </div>
 
           {/* ปุ่มค้นหา */}
@@ -136,36 +147,34 @@ export default function Navbar() {
         </AnimatePresence>
       </nav>
 
-
-          {/* Desktop menu */}
-          <div className="hidden md:flex items-center gap-8 text-base font-medium">
-            <a href="/" className="hover:text-green-600 transition-colors">
-              หน้าหลัก
-            </a>
-            <a href="/" className="hover:text-green-600 transition-colors">
-              เนื้อหา
-            </a>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                const footer = document.getElementById('footer');
-                if (footer) {
-                  footer.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                  window.scrollTo({
-                    top: document.body.scrollHeight,
-                    behavior: 'smooth',
-                  });
-                }
-                setIsOpen(false);
-              }}
-              className="hover:text-green-600 transition-colors"
-            >
-              ติดต่อ
-            </a>
-          </div>
-
+      {/* Desktop menu */}
+      <div className="hidden md:flex items-center gap-8 text-base font-medium">
+        <a href="/" className="hover:text-green-600 transition-colors">
+          หน้าหลัก
+        </a>
+        <a href="/" className="hover:text-green-600 transition-colors">
+          เนื้อหา
+        </a>
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            const footer = document.getElementById('footer');
+            if (footer) {
+              footer.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth',
+              });
+            }
+            setIsOpen(false);
+          }}
+          className="hover:text-green-600 transition-colors"
+        >
+          ติดต่อ
+        </a>
+      </div>
 
       {/* ✅ Overlay (click outside to close) */}
       <div
