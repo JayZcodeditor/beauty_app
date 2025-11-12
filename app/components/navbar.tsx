@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 
-import IconLogo from '../assets/icons/logo.png';
+import IconLogo from '../assets/icons/logo7.png';
 
 export default function Navbar() {
   const router = useRouter();
@@ -63,14 +63,15 @@ export default function Navbar() {
             {/* <span className="text-lg font-semibold text-green-600">
               ALL ONLINE
             </span> */}
-            <Image
-              src={IconLogo}
-              alt="Beauty Logo"
-              width={1200}
-              height={100}
-              className="w-full rounded-lg object-cover"
-              priority
-            />
+          <Image
+            src={IconLogo}
+            alt="Beauty Logo"
+            width={1200}
+            height={300}
+            className="w-full max-h-[50px] object-contain rounded-lg"
+            priority
+          />
+
           </div>
 
           {/* ปุ่มค้นหา */}
